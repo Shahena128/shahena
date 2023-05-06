@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <h1 id="root"></h1>
+   </center>
+   
+   <script>
+let sec=0
+let minute=0
+let hour=0
+setInterval(()=>{
+    sec++
+    let show= document.getElementById('root')
+    show.innerHTML=`
+     Hours:${hour}
+    ~Minutes:${minute}
+    ~sec:${sec}`
+    if(sec==60){
+        sec=0
+        minute++
+    }
+    if(minute==5){
+        minute=0
+        hours++
+    }
+    if(hour==24){
+        hour=0
+    } 
+}, 1000);
+   </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <h1>My Basic Calculator</h1>
+    <label>give val 1</label>
+    <input type="number" id="val1"><br>
+    <label>give val 2</label>
+    <input type="number" id="val2">
+    <h1 id="root"></h1>
+    <button onclick="addition()">add</button>
+    <button onclick="subtract()">sub</button>
+    <button onclick="multiply()">mul</button>
+    <button onclick="division()">div</button>
+   </center> 
+   <script>
+    function addition(){ 
+       let a=document.getElementById('val1').value 
+       let b=document.getElementById('val2').value 
+       let total=document.getElementById('root')
+       total.innerHTML=parseInt(a) +parseInt(b)
+    }
+    function subtract(){ 
+       let a=document.getElementById('val1').value 
+       let b=document.getElementById('val2').value 
+       let total=document.getElementById('root')
+       total.innerHTML=parseInt(a) -parseInt(b)
+    } 
+     function multiply(){ 
+       let a=document.getElementById('val1').value 
+       let b=document.getElementById('val2').value 
+       let total=document.getElementById('root')
+       total.innerHTML=parseInt(a) *parseInt(b)
+    } 
+     function division(){ 
+       let a=document.getElementById('val1').value 
+       let b=document.getElementById('val2').value 
+       let total=document.getElementById('root')
+       total.innerHTML=parseInt(a) /parseInt(b)
+    }
+   </script>
+</body>
+</html>
